@@ -1,0 +1,118 @@
+doctype html
+html(lang="en")
+	head
+		title Sunshaders
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, inital-scale=1")
+		link(rel="stylesheet", href="styles.css")
+		link(rel="stylesheet", href="contactus.css")
+		link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous")
+		script(type="text/javascript", src="jquery.js")
+		script(type="text/javascript", src="bootstrap.min.js")
+	body
+		.container-fluid
+			.row
+				
+				.col-xs-12.col-sm-10
+					// Header Logo
+					img.img-responsive.center-block(src="images/logo.png")
+				.col-xs-12.col-sm-2
+					#address-header
+						address
+							| <strong>Sunshaders</strong>
+							br
+							| 3991 Hwy 544 Unit C
+							br
+							| Myrtle Beach, SC 29588
+							br
+							| <abbr title="Phone">P:</abbr> (843)-267-5827
+			// Nav Bar
+			.row
+				.col-xs-12
+					ul.nav.nav-pills
+						li(role="presentation")
+							a(href="index.html") Home
+						li(role="presentation")
+							a(href="aboutus.html") About Us
+						li.active(role="presentation")
+							a(href="") Contact Us
+			hr
+			.row
+				.col-xs-12.col-sm-12
+					h2#body-title Contact Us
+			.row
+				// Bootstrap Panel
+				.col-xs-12.col-sm-5
+					.panel(class="panel-default")
+						.panel-heading
+							h3(class="panel-title") Sunshaders Window Tinting
+						ul.list-group
+							li.list-group-item
+								h4.list-group-item-heading Address
+								p 3991 Hwy 544 Unit C, Myrtle Beach, SC
+							li.list-group-item
+								h4.list-group-item-heading Hours
+								p 9:00AM - 6:00PM
+							li.list-group-item 
+								h4.list-group-item-heading Phone Number
+								p (843)267-5827
+							li.list-group-item
+								a(target="_blank" href="https://www.facebook.com/Sunshaders-Professional-Window-Films-269926058911/timeline/?ref=ts") Like us of Facebook
+							li.list-group-item
+								h4.list-group-item-heading Email 
+								p sunshaders_tinting@yahoo.com
+				// End Bootstrap Panel
+				.col-xs-12.col-sm-2
+				.col-xs-12.col-sm-5
+					#map
+					// Google Maps API
+					script.
+						function initMap(){
+							var myLatLng = {lat: 33.663406, lng: -78.996187};
+							// Create Map Canvas
+							var map = new google.maps.Map(document.getElementById('map'),{
+								center: myLatLng,
+								scrollwheel: false,
+								zoom: 15
+								});
+							// Create Marker and Position
+							var marker = new google.maps.Marker({
+								map: map,
+								position: myLatLng,
+								title: 'Sunshaders'
+								});
+						}
+					script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP81Lk6NzTfNu3oWbIKK20sb0omrsmhUY&callback=initMap" async defer)
+
+			
+			hr
+			//start Footer
+			.row
+				.col-xs-12#footer
+					.row
+						.col-xs-10.col-sm-10.footer-list
+							ul.list-inline
+								li
+									a(href="index.html")
+										button(type="button" class="btn btn-default") Home
+								li
+									a(href="aboutus.html")
+										button(type="button" class="btn btn-default") About Us
+								li
+										button(type="button" class="btn btn-primary active") Contact Us
+						.hidden-xs.col-sm-2#address-footer
+							address
+								| <strong>Sunshaders</strong>
+								br
+								| 3991 Hwy 544 Unit C
+								br
+								| Myrtle Beach, SC 29588
+								br
+								| <abbr title="Phone">P:</abbr> (843)-267-5827
+					.clear.col-xs-12.col-sm-12
+					.row#footer-lower-column
+						.col-xs-12.col-sm-3#company
+							h5 Robertson Web Development
+						.col-xs-12.col-sm-6
+						.col-xs-12.col-sm-3#url
+							h5 RobertsonWebDev.com | &#169 2015

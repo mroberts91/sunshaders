@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sunshaders</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contactus.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10">
+          <!-- Header Logo--><img src="images/logo.png" class="img-responsive center-block">
+        </div>
+        <div class="col-xs-12 col-sm-2">
+          <div id="address-header">
+            <address><strong>Sunshaders</strong><br>3991 Hwy 544 Unit C<br>Myrtle Beach, SC 29588<br><abbr title="Phone">P:</abbr> (843)-267-5827</address>
+          </div>
+        </div>
+      </div>
+      <!-- Nav Bar-->
+      <div class="row">
+        <div class="col-xs-12">
+          <ul class="nav nav-pills">
+            <li role="presentation"><a href="index.html">Home</a></li>
+            <li role="presentation"><a href="aboutus.html">About Us</a></li>
+            <li role="presentation" class="active"><a href="">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <h2 id="body-title">Contact Us</h2>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Bootstrap Panel-->
+        <div class="col-xs-12 col-sm-5">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Sunshaders Window Tinting</h3>
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <h4 class="list-group-item-heading">Address</h4>
+                <p>3991 Hwy 544 Unit C, Myrtle Beach, SC</p>
+              </li>
+              <li class="list-group-item">
+                <h4 class="list-group-item-heading">Hours</h4>
+                <p>9:00AM - 6:00PM</p>
+              </li>
+              <li class="list-group-item"> 
+                <h4 class="list-group-item-heading">Phone Number</h4>
+                <p>(843)267-5827</p>
+              </li>
+              <li class="list-group-item"><a target="_blank" href="https://www.facebook.com/Sunshaders-Professional-Window-Films-269926058911/timeline/?ref=ts">Like us of Facebook</a></li>
+              <li class="list-group-item">
+                <h4 class="list-group-item-heading">Email </h4>
+                <p>sunshaders_tinting@yahoo.com</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- End Bootstrap Panel-->
+        <div class="col-xs-12 col-sm-2"></div>
+        <div class="col-xs-12 col-sm-5">
+          <div id="map"></div>
+          <!-- Google Maps API-->
+          <script>
+            function initMap(){
+            	var myLatLng = {lat: 33.663406, lng: -78.996187};
+            	// Create Map Canvas
+            	var map = new google.maps.Map(document.getElementById('map'),{
+            		center: myLatLng,
+            		scrollwheel: false,
+            		zoom: 15
+            		});
+            	// Create Marker and Position
+            	var marker = new google.maps.Marker({
+            		map: map,
+            		position: myLatLng,
+            		title: 'Sunshaders'
+            		});
+            }
+          </script>
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP81Lk6NzTfNu3oWbIKK20sb0omrsmhUY&amp;callback=initMap" async defer></script>
+        </div>
+      </div>
+      <hr>
+      <!--start Footer-->
+      <div class="row">
+        <div id="footer" class="col-xs-12">
+          <div class="row">
+            <div class="col-xs-10 col-sm-10 footer-list">
+              <ul class="list-inline">
+                <li><a href="index.html">
+                    <button type="button" class="btn btn-default">Home</button></a></li>
+                <li><a href="aboutus.html">
+                    <button type="button" class="btn btn-default">About Us</button></a></li>
+                <li>
+                  <button type="button" class="btn btn-primary active">Contact Us</button>
+                </li>
+              </ul>
+            </div>
+            <div id="address-footer" class="hidden-xs col-sm-2">
+              <address><strong>Sunshaders</strong><br>3991 Hwy 544 Unit C<br>Myrtle Beach, SC 29588<br><abbr title="Phone">P:</abbr> (843)-267-5827</address>
+            </div>
+          </div>
+          <div class="clear col-xs-12 col-sm-12"></div>
+          <div id="footer-lower-column" class="row">
+            <div id="company" class="col-xs-12 col-sm-3">
+              <h5>Robertson Web Development</h5>
+            </div>
+            <div class="col-xs-12 col-sm-6"></div>
+            <div id="url" class="col-xs-12 col-sm-3">
+              <h5>RobertsonWebDev.com | &#169 2015</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

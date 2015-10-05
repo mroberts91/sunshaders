@@ -1,0 +1,137 @@
+doctype html
+html(lang="en")
+	head
+		title Sunshaders
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, inital-scale=1")
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		link(rel="stylesheet", href="styles.css")
+		link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous")
+		script(type="text/javascript", src="jquery.js")
+		script(type="text/javascript",src="https://maps.googleapis.com/maps/api/js")
+		script(type="text/javascript", src="bootstrap.min.js")
+	body
+		.container-fluid
+			.row
+				
+				.col-xs-12.col-sm-10
+					// Header Logo
+					img.img-responsive.center-block(src="images/logo.png")
+				.col-xs-12.col-sm-2
+					#address-header
+						address
+							| <strong>Sunshaders</strong>
+							br
+							| 3991 Hwy 544 Unit C
+							br
+							| Myrtle Beach, SC 29588
+							br
+							| <abbr title="Phone">P:</abbr> (843)-267-5827
+			// Nav Bar
+			.row
+				.col-xs-12
+					ul.nav.nav-pills
+						li.active(role="presentation")
+							a(href="index.html") Home
+						li(role="presentation")
+							a(href="aboutus.html") About Us
+						li(role="presentation")
+							a(href="contactus.html") Contact Us
+			hr
+			// Left Main Column
+			.row
+				.hidden-xs.col-xs-12.col-sm-2#left-main-img
+					img.img-responsive.center-block.thumbnails.left#llumar(src="images/llumar.png")
+					img.img-responsive.center-block.thumbnails.left#energy-star(src="images/energy-star.png")
+				.col-xs-12.col-sm-8#main-column
+					.row
+						.col-xs-12.col-sm-3.col-md-3
+						.col-xs-12.col-sm-6.col-md-6#main-column-header
+							h2 Quality Automotive and Commercial Window Tinting <br />
+								small "We Stick It Where The Sun Shines"
+						.col-xs-12.col-sm-3.col-md-3
+					.row
+						.col-xs-12.col-sm-2
+						// Start Bootstrap carousel
+						.col-xs-12.col-sm-8#carousel-example-generic(class="carousel slide" data-ride="carousel" data-interval="4000")
+							// indacators
+							ol.carousel-indicators
+								li(data-target="#carousel-example-generic" data-slide-to="0" class="active")
+								li(data-target="#carousel-example-generic" data-slide-to="1")
+								li(data-target="#carousel-example-generic" data-slide-to="2")
+								li(data-target="#carousel-example-generic" data-slide-to="3")
+								li(data-target="#carousel-example-generic" data-slide-to="4")
+								li(data-target="#carousel-example-generic" data-slide-to="5")
+							// wrapper for slides
+							.carousel-inner(role="listbox")
+								div(class="item active")
+									img.img-responsive.center-block.slideshow-img(src="images/booth.png")
+									.carousel-caption
+								.item
+									img.img-responsive.center-block.slideshow-img(src="images/planet.png")
+									.carousel-caption
+								.item
+									img.img-responsive.center-block.slideshow-img(src="images/explorer.png")
+									.carousel-caption
+								.item
+									img.img-responsive.center-block.slideshow-img(src="images/boat.png")
+									.carousel-caption
+								.item
+									img.img-responsive.center-block.slideshow-img(src="images/nissan.png")
+									.carousel-caption
+								.item
+									img.img-responsive.center-block.slideshow-img(src="images/windows.png")
+									.carousel-caption
+						// End Bootstrap Carousel
+						.col-xs-12.col-sm-2
+					// Main Column Body Text
+					.row
+						.col-xs-12.main-column-body
+						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil quam eligendi nisi, voluptates assumenda. Facere, maxime, nihil. Dolorum aspernatur saepe perspiciatis expedita ducimus vitae voluptate illo, magni voluptatum corporis, totam.
+				// Right Sidebar
+				.col-xs-12.col-sm-2#sidebar
+					.row
+						h3#header-secondary Meet our Staff!
+						// Todd Profile Picture
+						h4.names.text-left Todd Mothershead
+						br
+						h5.names.text-left Owner
+						img.img-responsive.center-block.thumbnails.img-thumbnail.img-responsive(src="images/todd.png")
+						// Debbie Profile Picture
+						h4.names.text-left Debbie Borash
+						br
+						h5.names.text-left Owner
+						img.img-responsive.center-block.thumbnails.img-thumbnail.img-responsive(src="images/debbie.png")
+						a(target="_blank" href="https://www.facebook.com/Sunshaders-Professional-Window-Films-269926058911/timeline/")
+							img.img-responsive.center-block.img-thumbnail.img-responsive(src="images/facebook.png")
+			hr
+			//start Footer
+			.row
+				.col-xs-12#footer
+					.row
+						.col-xs-10.col-sm-10.footer-list
+							ul.list-inline
+								li
+									button(type="button" class="btn btn-primary active") Home
+								li
+									a(href="aboutus.html")
+										button(type="button" class="btn btn-default") About Us
+								li
+									a(href="contactus.html")
+										button(type="button" class="btn btn-default") Contact Us
+						.hidden-xs.col-sm-2#address-footer
+							address
+								| <strong>Sunshaders</strong>
+								br
+								| 3991 Hwy 544 Unit C
+								br
+								| Myrtle Beach, SC 29588
+								br
+								| <abbr title="Phone">P:</abbr> (843)-267-5827
+					.clear.col-xs-12.col-sm-12
+					.row#footer-lower-column
+						.col-xs-12.col-sm-3#company
+							h5 Robertson Web Development
+						.col-xs-12.col-sm-6
+						.col-xs-12.col-sm-3#url
+							h5 RobertsonWebDev.com | &#169 2015

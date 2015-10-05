@@ -1,0 +1,82 @@
+doctype html
+html(lang="en")
+	head
+		title Sunshaders
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, inital-scale=1")
+		link(rel="stylesheet", href="styles.css")
+		link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous")
+		script(type="text/javascript", src="jquery.js")
+		script(type="text/javascript",src="https://maps.googleapis.com/maps/api/js")
+		script(type="text/javascript", src="bootstrap.min.js")
+		script.
+			// google maps API
+			function initialize() {
+				var mapCanvas = document.getElementById('map');
+				var mapOptions = {
+					center: new google.maps.LatLng(33.663361, -78.996235),
+					zoom: 15,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				}
+				var map = new google.maps.Map(mapCanvas, mapOptions);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+	body
+		.container-fluid
+			.row
+				
+				.col-xs-12.col-sm-10
+					// Header Logo
+					img.img-responsive.center-block(src="images/logo.png")
+				.col-xs-12.col-sm-2
+					#address-header
+						address
+							| <strong>Sunshaders</strong>
+							br
+							| 3991 Hwy 544 Unit C
+							br
+							| Myrtle Beach, SC 29588
+							br
+							| <abbr title="Phone">P:</abbr> (843)-267-5827
+			// Nav Bar
+			.row
+				.col-xs-12
+					ul.nav.nav-pills
+						li.active(role="presentation")
+							a(href="index.html") Home
+						li(role="presentation")
+							a(href="aboutus.html") About Us
+						li(role="presentation")
+							a(href="contactus.html") Contact Us
+			hr
+			hr
+			//start Footer
+			.row
+				.col-xs-12#footer
+					.row
+						.col-xs-10.col-sm-10.footer-list
+							ul.list-inline
+								li
+									button(type="button" class="btn btn-primary active") Home
+								li
+									a(href="aboutus.html")
+										button(type="button" class="btn btn-default") About Us
+								li
+									a(href="contactus.html")
+										button(type="button" class="btn btn-default") Contact Us
+						.hidden-xs.col-sm-2#address-footer
+							address
+								| <strong>Sunshaders</strong>
+								br
+								| 3991 Hwy 544 Unit C
+								br
+								| Myrtle Beach, SC 29588
+								br
+								| <abbr title="Phone">P:</abbr> (843)-267-5827
+					.clear.col-xs-12.col-sm-12
+					.row#footer-lower-column
+						.col-xs-12.col-sm-3#company
+							h5 Robertson Web Development
+						.col-xs-12.col-sm-6
+						.col-xs-12.col-sm-3#url
+							h5 RobertsonWebDev.com | &#169 2015
